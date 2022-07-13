@@ -37,17 +37,21 @@ function HotelContainer() {
   const deleteGuest = (id) => {
     apiDeleteGuest(id).then(() => {
       const copiedGuests = [...allGuests];
-      const guestToDelete = copiedGuests.find(guest => guest._id === id);
+      const guestToDelete = copiedGuests.map(guest => guest._id).indexOf(id);
       copiedGuests.splice(guestToDelete, 1);
       setAllGuests(copiedGuests);
     })
+  }
+
+  const updateGuest = (id) => {
+    return;
   }
 
   return (
     <>
       <HotelTitle />
       <NewGuestForm addGuest={addGuest} />
-      <AllBookings guests={allGuests} deleteGuest={deleteGuest} />
+      <AllBookings guests={allGuests} deleteGuest={deleteGuest} updateGuest={updateGuest} />
     </>
   )
 }

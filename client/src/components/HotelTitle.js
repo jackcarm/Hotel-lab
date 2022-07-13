@@ -2,8 +2,8 @@ import React from 'react';
 
 function HotelTitle() {
 
-    return <h1>Welcome to the Hotel!<h1 />
+    return <h1>Welcome to the Hotel!</h1>
 
 }
 
-        export default HotelTitle;
+export default HotelTitle;

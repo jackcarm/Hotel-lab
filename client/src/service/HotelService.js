@@ -20,8 +20,9 @@ export const deleteGuest = (id) => {
     })
 }
 
-export const updateGuest = (id, payload) => {
-    return fetch(baseURL + id, {
+// edited this to look like Jarrods :)
+export const updateGuest = (payload) => {
+    return fetch(baseURL + payload._id, {
         method: 'PUT',
         body: JSON.stringify(payload),
         headers: { 'Content-Type': 'application/json' }
